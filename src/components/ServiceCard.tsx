@@ -6,11 +6,10 @@ type TitleBg = "green" | "white";
 interface ServiceCardProps {
   bg: CardBg;
   titleLines: string[];
-  illustrationSrc: string;
-  illustrationAlt?: string;
+  imgSrc: string;
+  imgAlt?: string;
   illustrationClassName?: string;
   titleBg?: TitleBg;
-  showTitleBackground?: boolean;
 }
 
 const bgStyles: Record<CardBg, string> = {
@@ -24,28 +23,19 @@ const titleBgStyles: Record<TitleBg, string> = {
   white: "bg-white",
 };
 
-export default function ServiceCard({
-  bg,
-  titleLines,
-  illustrationSrc,
-  illustrationAlt = "Illustration placeholder",
-  titleBg = "green",
-  showTitleBackground = true,
-}: ServiceCardProps) {
+export default function ServiceCard({ bg, titleBg = "green", titleLines, imgSrc, imgAlt = "Illustration placeholder" }: ServiceCardProps) {
   const isDark = bg === "dark";
 
   return (
     <div
-      className={`w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 sm:gap-19.25 p-6 sm:p-10 lg:p-12.5 ${bgStyles[bg]} border border-solid border-theme-dark rounded-[45px] shadow-[0px_5px_0px_0px_#191A23] overflow-hidden`}
+      className={`w-full flex flex-col lg:flex-row justify-between gap-8 sm:gap-19.25 p-6 lg:p-12.5 ${bgStyles[bg]} border border-solid border-theme-dark rounded-[45px] shadow-[0px_5px_0px_0px_#191A23] overflow-hidden`}
     >
-      <div className="flex flex-col items-start justify-start gap-10 sm:gap-23.25">
-        <div className="flex flex-col items-start justify-start">
+      <div className="flex flex-col gap-10 sm:gap-23.25">
+        <div className="flex flex-col items-start justify-center">
           {titleLines.map((line, i) => (
             <div
               key={i}
-              className={`text-nowrap flex flex-col items-start justify-start gap-2.5 px-1.75 rounded-[7px] ${
-                showTitleBackground ? titleBgStyles[titleBg] : ""
-              }`}
+              className={`text-nowrap flex flex-col gap-2.5 px-1.75 rounded-[7px] ${titleBgStyles[titleBg]}`}
             >
               <span className="text-black font-semibold text-[22px] sm:text-[26px] lg:text-[30px]">
                 {line}
@@ -69,10 +59,10 @@ export default function ServiceCard({
           </span>
         </div>
       </div>
-      <div className="shrink-0 self-center sm:self-auto">
+      <div className="hidden lg:block shrink-0 self-center">
         <img
-          src={illustrationSrc}
-          alt={illustrationAlt}
+          src={imgSrc}
+          alt={imgAlt}
           className="w-32 sm:w-40 lg:w-auto h-auto"
         />
       </div>

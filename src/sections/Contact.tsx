@@ -127,7 +127,7 @@ export default function Contact() {
           noValidate
           className="flex flex-col items-start justify-start gap-10 w-full lg:w-139 lg:max-w-139 z-10"
         >
-          <div className="flex flex-row items-start justify-start gap-8.75">
+          <div className="flex flex-col md:flex-row md:gap-8.75">
             <RadioOption
               label="Say Hi"
               value="say-hi"

@@ -37,7 +37,7 @@ export default function LogoCarousel({ logos }: LogoCarouselProps) {
 
   return (
     <div
-      className="w-full px-6 sm:px-10 lg:px-25 overflow-hidden"
+      className="w-full overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

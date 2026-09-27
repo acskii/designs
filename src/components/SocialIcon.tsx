@@ -14,7 +14,7 @@ export default function SocialIcon({ social, theme = "white", href = "#" }: Soci
     const render = iconMap[social];
    
     return (
-        <a href={href} className={`${theme == "white" ? "bg-white text-theme-black" : "bg-theme-black text-theme-green"} rounded-full  p-2`}>
+        <a href={href} className={`${theme == "white" ? "bg-white text-theme-black" : "bg-theme-black text-theme-green"} rounded-full max-h-8 max-w-8 p-2`}>
             {render && createElement(render, { size: 18 })}
         </a>
     );

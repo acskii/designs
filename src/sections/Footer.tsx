@@ -3,7 +3,7 @@ import { LuExternalLink } from "react-icons/lu";
 
 export default function Footer({}) {
   return (
-    <div className="w-full">
+    <div className="w-full lg:pl-25 lg:pr-25">
       <div className="w-full flex flex-col items-start justify-start gap-12.5 pt-13.75 pb-12.5 px-10 lg:px-15 bg-theme-dark rounded-tl-[45px] rounded-tr-[45px] rounded-bl-none rounded-br-none">
         <div className="w-full flex flex-col items-start justify-start gap-16.5">
           {/* Top row */}
@@ -13,7 +13,7 @@ export default function Footer({}) {
               src="static/logo.png"
             />
 
-            <nav className="flex flox-col lg:flex-row items-center justify-center gap-5 lg:gap-10">
+            <nav className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-10">
               <a
                     href="#"
                     className="text-white text-nowrap text-[18px] hover:text-theme-green transition-colors"
@@ -81,14 +81,14 @@ export default function Footer({}) {
                 <input
                   type="email"
                   placeholder={"Email"}
-                  className="w-full bg-transparent text-white text-lg placeholder:text-white focus:outline-none"
+                  className="w-full bg-transparent text-white text-sm md:text-lg placeholder:text-white focus:outline-none"
                 />
               </div>
               <button
                 type="button"
-                className="flex items-start justify-center gap-2.5 pt-5 pb-5 px-8.75 bg-theme-green rounded-[14px] cursor-pointer hover:bg-[#a8f04d] transition-colors"
+                className="flex items-start justify-center gap-2.5 pt-5 pb-5 px-8.75 bg-theme-green rounded-[14px] cursor-pointer"
               >
-                <p className="text-black text-xl text-nowrap">
+                <p className="text-black text-md md:text-xl md:text-nowrap">
                   {"Subscribe to news"}
                 </p>
               </button>

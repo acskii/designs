@@ -5,10 +5,37 @@ export default function Header() {
     
     return (
         <nav className="w-full flex flex-row items-center justify-between gap-4 py-5">
-            <img
-              className="w-45 h-auto shrink-0"
-              src="static/logo.png"
-            />
+            <div className="flex flex-col gap-1.5">
+                <button
+                    type="button"
+                    aria-label="Toggle menu"
+                    aria-expanded={isMenuOpen}
+                    onClick={() => setIsMenuOpen((v) => !v)}
+                    className="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 cursor-pointer"
+                >
+                    <span
+                    className={`block w-6 h-0.5 bg-theme-black transition-transform ${
+                        isMenuOpen ? "translate-y-2 rotate-45" : ""
+                    }`}
+                    />
+                    <span
+                    className={`block w-6 h-0.5 bg-theme-black transition-opacity ${
+                        isMenuOpen ? "opacity-0" : "opacity-100"
+                    }`}
+                    />
+                    <span
+                    className={`block w-6 h-0.5 bg-theme-black transition-transform ${
+                        isMenuOpen ? "-translate-y-2 -rotate-45" : ""
+                    }`}
+                    />
+                </button>
+
+                <img
+                className="w-45 h-auto shrink-0"
+                src="static/logo.png"
+                />
+            </div>
+            
 
             <section className="hidden lg:flex justify-center items-center gap-10">
                 <a
@@ -49,33 +76,9 @@ export default function Header() {
                 </button>
             </section>
 
-            <button
-                type="button"
-                aria-label="Toggle menu"
-                aria-expanded={isMenuOpen}
-                onClick={() => setIsMenuOpen((v) => !v)}
-                className="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 cursor-pointer"
-            >
-                <span
-                className={`block w-6 h-0.5 bg-theme-black transition-transform ${
-                    isMenuOpen ? "translate-y-2 rotate-45" : ""
-                }`}
-                />
-                <span
-                className={`block w-6 h-0.5 bg-theme-black transition-opacity ${
-                    isMenuOpen ? "opacity-0" : "opacity-100"
-                }`}
-                />
-                <span
-                className={`block w-6 h-0.5 bg-theme-black transition-transform ${
-                    isMenuOpen ? "-translate-y-2 -rotate-45" : ""
-                }`}
-                />
-            </button>
-
             {/* Mobile drawer */}
             {isMenuOpen && (
-                <div className="w-[35%] absolute top-40 right-0 z-20 lg:hidden bg-white border border-theme-dark">
+                <div className="w-full absolute top-40 left-0 right-0 z-20 lg:hidden bg-white border border-theme-dark">
                     <div className="flex flex-col items-center gap-5 px-6 py-6">
                         <a
                             href="#"

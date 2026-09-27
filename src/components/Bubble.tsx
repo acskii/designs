@@ -13,22 +13,22 @@ interface BubbleProps {
 export default function Bubble({ testimonial, isActive }: BubbleProps) {
   return (
     <div
-      className={`shrink-0 w-[85vw] sm:w-125 lg:w-151.5 flex flex-col items-start justify-start gap-5 transition-opacity duration-500 ${
+      className={`shrink-0 w-full sm:w-125 lg:w-151.5 flex flex-col items-start justify-start gap-5 transition-opacity duration-500 ${
         isActive ? "opacity-100" : "opacity-60"
       }`}
     >
-      <div className="relative w-full min-h-55 sm:min-h-64 rounded-[30px] border border-solid border-theme-green p-8 sm:p-10 lg:p-13">
-        <p className="text-white text-base sm:text-lg leading-relaxed">
+      <div className="relative w-full min-h-55 sm:min-h-64 rounded-[30px] border border-solid border-theme-green p-6 sm:p-10 lg:p-13">
+        <p className="text-white text-sm sm:text-lg leading-relaxed">
           "{testimonial.quote}"
         </p>
         {/* Speech bubble tail */}
         <div className="absolute -bottom-3.5 left-12 w-7 h-7 rotate-45 bg-theme-dark border-b border-r border-solid border-theme-green" />
       </div>
-      <div className="pl-8 sm:pl-10 lg:pl-13">
-        <p className="text-theme-green text-lg sm:text-xl font-medium">
+      <div className="pl-6 sm:pl-10 lg:pl-13">
+        <p className="text-theme-green text-base sm:text-xl font-medium">
           {testimonial.name}
         </p>
-        <p className="text-white text-base sm:text-lg">
+        <p className="text-white text-sm sm:text-lg">
           {testimonial.role}
         </p>
       </div>

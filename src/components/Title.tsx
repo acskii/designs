@@ -1,4 +1,3 @@
-
 interface TitleProps {
     title: string;
     desc: string;
@@ -6,13 +5,11 @@ interface TitleProps {
 
 export default function Title( { title, desc } : TitleProps ) {
     return (
-        <div className="w-full inline-flex justify-start items-start gap-10 text-theme-black">
-            <div className="size- inline-flex flex-col justify-start items-start">
-                <div className="px-1.5 bg-theme-green rounded-md flex flex-col justify-start items-start gap-2.5">
-                <div className="justify-start text-4xl font-semibold">{title}</div>
-                </div>
+        <div className="w-full flex flex-col lg:flex-row gap-10 text-theme-black">
+            <div className="p-1.5 bg-theme-green rounded-md text-center">
+                <span className="text-2xl lg:text-4xl font-semibold">{title}</span>
             </div>
-            <div className="justify-starttext-lg">{desc}</div>
+            <span className="text-md md:text-lg text-wrap">{desc}</span>
         </div>
     );
 }

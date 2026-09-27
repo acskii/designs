@@ -2,7 +2,7 @@
 
 export default function Hero() {
     return (
-        <header className="w-full flex flex-col lg:flex-row justify-between items-start gap-10 px-6 sm:px-10 lg:px-25">
+        <header className="w-full flex flex-col lg:flex-row justify-between items-start gap-10">
             <div className="flex flex-col items-start justify-start gap-8.75 max-w-full lg:max-w-150">
                 <h1 className="text-theme-black text-3xl sm:text-4xl lg:text-[60px] font-medium leading-tight">
                     Navigating the digital landscape for success
