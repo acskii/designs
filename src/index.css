@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    --color-theme-green: var(--theme-green);
+    --color-theme-gray: var(--theme-gray);
+    --color-theme-dark: var(--theme-dark);
+    --color-theme-black: var(--theme-black);
+}
+
+:root {
+    --theme-green: #B9FF66;
+    --theme-gray: #F3F3F3;
+    --theme-dark: #191A23;
+    --theme-black: #000000;
+
+    font-family: "Space Grotesk", "sans-serif";
+}
