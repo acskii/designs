@@ -24,7 +24,7 @@ export default function Hero() {
 
             <div className="w-full lg:w-auto flex items-center justify-center lg:justify-end">
                 <img
-                    src="src/assets/hero_illustration.png"
+                    src="static/hero_illustration.png"
                     alt="Hero illustration"
                     className="block w-full max-w-128.75 h-auto object-contain"
                 />

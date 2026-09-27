@@ -224,7 +224,7 @@ export default function Contact() {
         {/* Illustration pinned to the card's right edge */}
         <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
           <img
-            src="src/assets/contact_illustration.png"
+            src="static/contact_illustration.png"
             alt="Contact illustration"
             className="w-162 h-162 object-contain object-right"
           />

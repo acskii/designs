@@ -20,7 +20,7 @@ export default function App() {
  
       <section className="flex flex-col gap-10 mb-30">
         <Hero />
-        <LogoCarousel logos={["src/assets/companies/zoom.png", "src/assets/companies/notion.png", "src/assets/companies/netflix.png", "src/assets/companies/hubspot.png", "src/assets/companies/amazon.png", "src/assets/companies/dribbble.png"]} />
+        <LogoCarousel logos={["static/companies/zoom.png", "static/companies/notion.png", "static/companies/netflix.png", "static/companies/hubspot.png", "static/companies/amazon.png", "static/companies/dribbble.png"]} />
       </section>
       
       <section className="flex flex-col gap-10 mb-30">
@@ -29,7 +29,7 @@ export default function App() {
       </section>
       
       <section className="mb-30">
-        <CtaBlock illustrationSrc="src/assets/cta_illustration.png" />
+        <CtaBlock illustrationSrc="static/cta_illustration.png" />
       </section>
       
       <section className="flex flex-col gap-10 mb-30">

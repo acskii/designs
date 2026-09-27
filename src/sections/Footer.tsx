@@ -10,7 +10,7 @@ export default function Footer({}) {
           <div className="w-full flex flex-col lg:flex-row items-center lg:justify-between justify-center gap-10">
             <img
               className="invert w-45 h-auto shrink-0"
-              src="src/assets/logo.png"
+              src="/logo.png"
             />
 
             <nav className="flex flox-col lg:flex-row items-center justify-center gap-5 lg:gap-10">

@@ -7,7 +7,7 @@ export default function Header() {
         <nav className="w-full flex flex-row items-center justify-between gap-4 py-5">
             <img
               className="w-45 h-auto shrink-0"
-              src="src/assets/logo.png"
+              src="/logo.png"
             />
 
             <section className="hidden lg:flex justify-center items-center gap-10">
